@@ -1,44 +1,402 @@
+```html
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurace Na Slovance</title>
+
+    <title>Restaurace Na Slovance | Sokolov</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Restaurace Na Slovance</h1>
-        <p>Poctivé jídlo, příjemné prostředí a dobrá atmosféra.</p>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">NA SLOVANCE</a>
+
+            <nav>
+                <a href="#o-nas">O nás</a>
+                <a href="#speciality">Speciality</a>
+                <a href="#menu">Menu</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+
+            <a href="tel:+420608220254" class="nav-button">
+                Rezervovat stůl
+            </a>
+        </div>
     </header>
 
-    <main>
 
-        <section>
-            <h2>Vítejte u nás</h2>
-            <p>
-                Přijďte si pochutnat na dobrém jídle a užít si příjemný čas
-                v Restauraci Na Slovance.
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="eyebrow">RESTAURACE • SOKOLOV</p>
+
+            <h1>
+                NA<br>
+                SLOVANCE
+            </h1>
+
+            <p class="hero-text">
+                Poctivá domácí kuchyně,
+                dobré jídlo a příjemná atmosféra.
             </p>
-        </section>
 
-        <section>
-            <h2>Naše nabídka</h2>
-            <p>Česká kuchyně, oblíbené speciality a něco dobrého k pití.</p>
-        </section>
+            <div class="hero-buttons">
+                <a href="#menu" class="button button-primary">
+                    Prohlédnout menu
+                </a>
 
-        <section>
-            <h2>Kde nás najdete</h2>
-            <p>Slovanka</p>
-        </section>
+                <a href="tel:+420608220254" class="button button-outline">
+                    Rezervovat stůl
+                </a>
+            </div>
+        </div>
 
-    </main>
+    </section>
 
+
+    <!-- ABOUT -->
+    <section class="about section" id="o-nas">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=80"
+                    alt="Interiér restaurace"
+                >
+            </div>
+
+            <div class="about-content">
+
+                <p class="section-label">O NÁS</p>
+
+                <h2>
+                    Poctivé jídlo<br>
+                    bez zbytečných řečí.
+                </h2>
+
+                <p>
+                    V Restauraci Na Slovance si zakládáme na dobrém jídle,
+                    poctivé domácí kuchyni a příjemném prostředí.
+                </p>
+
+                <p>
+                    Ať se zastavíte na oběd, večeři nebo jen na něco dobrého,
+                    chceme, abyste od nás odcházeli spokojení.
+                </p>
+
+                <a href="#kontakt" class="text-link">
+                    Přijďte se podívat →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPECIALITIES -->
+    <section class="specialities section" id="speciality">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">Z NAŠÍ KUCHYNĚ</p>
+                    <h2>Naše speciality</h2>
+                </div>
+
+                <p>
+                    Poctivá jídla připravená s chutí.
+                </p>
+            </div>
+
+
+            <div class="food-grid">
+
+                <article class="food-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80"
+                        alt="Pečená žebra"
+                    >
+
+                    <div class="food-info">
+                        <h3>Pečená žebra</h3>
+                        <span>Specialita podniku</span>
+                    </div>
+
+                </article>
+
+
+                <article class="food-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80"
+                        alt="Poctivé maso"
+                    >
+
+                    <div class="food-info">
+                        <h3>Poctivá kuchyně</h3>
+                        <span>Čerstvě připravené</span>
+                    </div>
+
+                </article>
+
+
+                <article class="food-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+                        alt="Domácí jídlo"
+                    >
+
+                    <div class="food-info">
+                        <h3>Domácí speciality</h3>
+                        <span>Podle aktuální nabídky</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu section" id="menu">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <p class="section-label">NABÍDKA</p>
+
+                <h2>Menu</h2>
+
+                <p>
+                    Výběr z naší kuchyně.
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <div class="menu-column">
+
+                    <h3>Hlavní jídla</h3>
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Řízek</h4>
+                            <p>Tradiční česká klasika</p>
+                        </div>
+
+                        <strong>189 Kč</strong>
+                    </div>
+
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Pečená žebra</h4>
+                            <p>Pomalu pečená v naší kuchyni</p>
+                        </div>
+
+                        <strong>249 Kč</strong>
+                    </div>
+
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Pečený bůček</h4>
+                            <p>Poctivá domácí kuchyně</p>
+                        </div>
+
+                        <strong>229 Kč</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="menu-column">
+
+                    <h3>Speciality</h3>
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Tatarák</h4>
+                            <p>Čerstvě připravený</p>
+                        </div>
+
+                        <strong>189 Kč</strong>
+                    </div>
+
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Kuřecí křídla</h4>
+                            <p>Křupavá a šťavnatá</p>
+                        </div>
+
+                        <strong>199 Kč</strong>
+                    </div>
+
+
+                    <div class="menu-item">
+                        <div>
+                            <h4>Jídlo na objednávku</h4>
+                            <p>Pro větší společnost</p>
+                        </div>
+
+                        <strong>Na dotaz</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">ATMOSFÉRA</p>
+                    <h2>Podívejte se k nám</h2>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                    alt="Restaurace"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+                    alt="Interiér"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=80"
+                    alt="Jídlo"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact section" id="kontakt">
+
+        <div class="container contact-grid">
+
+            <div>
+
+                <p class="section-label">KONTAKT</p>
+
+                <h2>
+                    Stavte se<br>
+                    na něco dobrého.
+                </h2>
+
+                <p>
+                    Najdete nás na Slovance v Sokolově.
+                    Rezervace můžete provést telefonicky.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+                    <span>ADRESA</span>
+                    <strong>Slovenská 867<br>356 01 Sokolov</strong>
+                </div>
+
+
+                <div class="contact-item">
+                    <span>TELEFON</span>
+
+                    <a href="tel:+420608220254">
+                        608 220 254
+                    </a>
+
+                    <a href="tel:+420774429832">
+                        774 429 832
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+                    <span>E-MAIL</span>
+
+                    <a href="mailto:romangaleja@gmail.com">
+                        romangaleja@gmail.com
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="tel:+420608220254"
+                    class="button button-primary contact-button"
+                >
+                    Zavolat a rezervovat
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Restaurace Na Slovance</p>
+
+        <div class="container footer-content">
+
+            <div>
+                <strong>NA SLOVANCE</strong>
+                <p>Restaurace v Sokolově</p>
+            </div>
+
+            <p>© 2026 Restaurace Na Slovance</p>
+
+        </div>
+
     </footer>
+
 
 </body>
 </html>
+```
