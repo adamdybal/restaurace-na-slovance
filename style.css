@@ -36,6 +36,7 @@ a {
     padding: 110px 0;
 }
 
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -69,12 +70,24 @@ nav {
 }
 
 nav a {
+    position: relative;
     font-size: 14px;
     transition: opacity 0.3s ease;
 }
 
-nav a:hover {
-    opacity: 0.6;
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .nav-button {
@@ -101,10 +114,8 @@ nav a:hover {
     position: relative;
     display: flex;
     align-items: center;
-
     background-image:
         url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85");
-
     background-size: cover;
     background-position: center;
     color: white;
@@ -113,7 +124,12 @@ nav a:hover {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.58);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.25)
+        );
 }
 
 .hero-content {
@@ -122,6 +138,19 @@ nav a:hover {
     width: min(1180px, 92%);
     margin: 0 auto;
     padding-top: 80px;
+    animation: heroIn 1s ease forwards;
+}
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .eyebrow,
@@ -162,7 +191,14 @@ nav a:hover {
     letter-spacing: 1.5px;
     font-size: 12px;
     font-weight: 700;
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
 }
 
 .button-primary {
@@ -200,8 +236,17 @@ nav a:hover {
     align-items: center;
 }
 
+.about-image {
+    overflow: hidden;
+}
+
 .about-image img {
     height: 600px;
+    transition: transform 0.7s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
 }
 
 .about-content {
@@ -230,6 +275,11 @@ nav a:hover {
     display: inline-block;
     margin-top: 15px;
     font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover {
+    transform: translateX(6px);
 }
 
 
@@ -274,6 +324,7 @@ nav a:hover {
 .food-card {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .food-card img {
@@ -282,7 +333,7 @@ nav a:hover {
 }
 
 .food-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .food-info {
@@ -293,7 +344,7 @@ nav a:hover {
     padding: 30px;
     background: linear-gradient(
         transparent,
-        rgba(0,0,0,0.85)
+        rgba(0,0,0,0.9)
     );
 }
 
@@ -379,6 +430,11 @@ nav a:hover {
 
 .gallery-grid img {
     height: 450px;
+    transition: transform 0.6s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
 }
 
 .gallery-grid img:first-child {
@@ -448,6 +504,28 @@ nav a:hover {
 
 
 /* =========================
+   MAP
+========================= */
+
+.map-section {
+    background: #e9e5dd;
+    padding: 0;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 450px;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -490,6 +568,10 @@ footer {
 
     .nav-button {
         padding: 9px 14px;
+    }
+
+    .hero {
+        min-height: 90vh;
     }
 
     .hero-content {
@@ -547,6 +629,10 @@ footer {
     .gallery-grid img,
     .gallery-grid img:first-child {
         height: 400px;
+    }
+
+    .map-wrapper {
+        height: 350px;
     }
 
     .footer-content {
